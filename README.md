@@ -1,8 +1,11 @@
 # High Performance Go Programming
 ## Avoid of Lock
 https://github.com/easierway/concurrent_map
+https://github.com/chaocai2001/HighPerformanceGo/blob/master/rlock_test.go
 
 ## Avoid of string key
+https://github.com/chaocai2001/HighPerformanceGo/blob/master/map_string_key_vs_int_key_test.go
+https://medium.com/@ConnorPeet/go-maps-are-not-o-1-91c1e61110bf
 
 ## Avoid of unnecessary access
 ```Go
@@ -45,6 +48,7 @@ for i:=0;i<100;i++{
 There's no reference-passing in Go at all.
 
 When using Map, Slice and Channel, you would feel like to passing by reference. Actually, it is not true. Map, Slice, Channel is the struct type which includes the point (memory address) to the backend storage. So, the value of the struct will be copied when passing, but they both point to the same backend storage.
-
+https://github.com/chaocai2001/HighPerformanceGo/blob/master/reference_vs_value_passing_test.go
 
 ## Avoid of auto-growing
+https://github.com/chaocai2001/HighPerformanceGo/blob/master/slice_auto_grow_test.go
